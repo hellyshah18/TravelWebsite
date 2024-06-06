@@ -1,8 +1,8 @@
 
 export default function Home() {
   return (
-   <h2>
+   <h1 className="font-bold text-teal-500 text-2xl">
     Hellooo!
-   </h2>
+   </h1>
   );
 }
