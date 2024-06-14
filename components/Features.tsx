@@ -4,7 +4,7 @@ import React from 'react'
 
 const Features = () => {
   return (
- <section className='flex-col flexCenter overflow-hidden bg-feature-bg bg-centerbg-no bg-repeat py-24'>
+ <section className='flex-col flexCenter overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24'>
   <div className='max-container flex  padding-container relative w-full justify-end'>
     <div className='flex flex-1 lg:min-h-[900px]'>
       <Image
@@ -12,19 +12,20 @@ const Features = () => {
       alt='phone'
       width={440}
       height={1000}
-      className='feature-photo'/>
+      className='feature-phone'/>
     </div>
     <div className='z-20 flex w-full flex-col lg:w-[60%]'>
-      <div>
+      <div className='relative'>
         <Image
         src='/camp.svg'
         alt='camp'
         width={50}
         height={50}
-        className='absolute left-'/>
+        className='absolute left-[-5px] top-[-28px] w-10 lg:w-[50px]'/>
         <h2 className='bold-40 lg:bold-64'>Our Features</h2>
       </div>
-      <ul className='mt-10 grid gap-20 md:grid-cols-2 lg:mg-20 lg:gap-20'>{FEATURES.map((feature)=>(
+      <ul className='mt-10 grid gap-10 md:grid-cols-2 lg:mg-20 lg:gap-20'>
+        {FEATURES.map((feature)=>(
         <FeatureItem 
         key={feature.title}
         title={feature.title}
@@ -32,7 +33,8 @@ const Features = () => {
         variant={feature.variant}
         description={feature.description}
         />
-      ))}</ul>
+      ))}
+      </ul>
     </div>
  </div>
 
